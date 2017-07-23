@@ -1,0 +1,19 @@
+plugins {
+	id 'groovy'
+}
+
+group 'com.insanedev'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+	compile 'org.codehaus.groovy:groovy-all:2.4.12'
+	testCompile 'org.spockframework:spock-core:1.1-groovy-2.4'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.0.1'
+	distributionType = Wrapper.DistributionType.ALL
+}
